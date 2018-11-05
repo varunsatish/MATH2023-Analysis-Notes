@@ -1,0 +1,56 @@
+\documentclass[11pt, oneside]{article}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage{amsmath,amsthm,amssymb,graphicx,float,parskip}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\DeclareMathOperator{\EX}{\mathbb{E}}
+\DeclareMathOperator{\PR}{\mathbb{P}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Pset}{\mathcal{P}}
+\DeclareMathOperator{\distas}{\overset{\mathrm{dist.}}{=}}
+\usepackage{float}
+\usepackage{subcaption}
+\title{MATH2023 (Analysis) Notes}
+\author{Varun Satish }
+\date{November 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Path Integrals}
+
+Corollary:
+
+$\gamma$ - a closed path in the domain $\mathcal{D} \subseteq \mathbf{C}$. If the function $f$ has a primitive, then:
+
+\[ \int_{\gamma} f(z) dz = 0\]
+
+Important Result:
+
+\[\int_{\gamma} \frac{1}{z-z_0} \quad \text{depends on $\alpha$ - the centre of $\gamma$} \] 
+
+This integral is equal to 0 whenever R, the radius of $\gamma$ is less than the radius of convergence of the function, i.e. when  $\alpha < |z - z_0| $. If $\gamma$ is a circle such tha $z_0$ is on it's outside. Why? the intuition is that this result follows because the primitive exists everywhere within the radius of convergence (there are no singularities). The integral otherwise is equal to $2 \pi i$. 
+
+\section{Laurent Expansions}
+
+Annulus: 
+\[ \big\{ z \in \mathbf{C} : R_1 < |z - z_0| < R_2  \big\} \]
+
+Lemma
+
+f - an analytic function in a given annulus, $\gamma_r$ - a circle with centre $z_0$ and radius R, then:
+
+\[ \int_{\gamma_r} f(z) dz \quad \text{does not depend on R} \]
+Theorem (Cauchy integral formula for annulus):
+
+f- analytic in a given annulus
+$c_1$, $c_2$ - two cirlces within the annulus, centred at $z_0$, $c_1$ inside $c_2$ and positivley oriented
+$z$ - between $c_1$ and $c_2$ 
+Then:
+
+\[ f(z) = \frac{1}{2 \pi i} \int_{c_2} \frac{f(w)}{w - z} dw - \frac{1}{2 \pi i} \int_{c_1} \frac{f(w)}{w - t} dw \]
+
+
+
+\end{document}
